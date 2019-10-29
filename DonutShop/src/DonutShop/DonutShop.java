@@ -11,8 +11,8 @@ public class DonutShop {
 		SinglyLinkedList beingServed = new SinglyLinkedList();
 		Random r = new Random(97);
 		double cpt = 2; //customers per tick on average
-		int servers = 8; //number of servers
-		int maxS=12; //Max for req time to be served
+		int servers = 4; //number of servers
+		int maxS=3; //Max for req time to be served
 		// the above three variables are what need to be changed in order to change the paramaters
 		double beenS=0;	// # of customers who have been served
 		double totalC=0; //total number of customers who have entered the wait line
@@ -51,7 +51,7 @@ public class DonutShop {
 				printout(i,beingServed.getS(),beenS,waitline.getS(),temp[1],temp[0],avg ,temp[2]);
 			}
 			System.out.println("Diagnostics:");
-			System.out.println("\tAvg waitime: "+ totalW/totalC);
+			System.out.println("\tAvg wait time: "+ totalW/totalC);
 			System.out.println("\tPercent of Customers Served: "+ beenS/totalC);
 	}
 
@@ -69,7 +69,7 @@ public class DonutShop {
 	private static void printout(int tick, int cis, double cwcs, int ciq, int twt, int wtmin, int wtavg, int wtmax)
 	{
 		System.out.println("Tick #: " + tick);
-		System.out.println("\t# Customes in service: " + cis);
+		System.out.println("\t# Customers in service: " + cis);
 		System.out.println("\t# Customers with completed service: " + cwcs);
 		System.out.println("\t# Customers with in queue: " + ciq);
 		System.out.println("\tTotal wait time: " + twt);
